@@ -1,0 +1,1 @@
+![Image](images/validation_siconfi_commitment.png)
