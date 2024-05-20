@@ -1,12 +1,12 @@
 # **MiDES: New Data and Facts from Local Procurement and Budget Execution in Brazil** 
 
 ## Overview
-
-We introduce a new dataset on municipal public finance in Brazil called MiDES (_Microdados de Despesas de Entes Subnacionais_[^1]) that allows users to answer several fiscal questions. We collect, clean, and harmonize microdata on public procurement and budget execution that covers more than half of the total municipalities of Brazil and represents over 40\% of the country's population.  
+We introduce a new dataset on municipal public finance in Brazil called MiDES (_Microdados de Despesas de Entes Subnacionais_[^1]) that allows users to answer several fiscal questions. We collect, clean, and harmonize microdata on public procurement and budget execution that covers around 73% of the total municipalities of Brazil and represents over 75% of the country's population.  
 
 The repository shows the full process of creation and understanding about our data. We collect from several Brazilian states data provided by State Audit Courts (_TCEs_ in Portuguese) about budget execution and procurements. Initially, we show this enforcement in [working paper](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099456511072320917/idu0577a4ea10ff8504db6089400548fa91b30a3) published by the World Bank with seven states. Here, we publish updates about our dataset with more States. We provide the original source, processing codes, queries, and other analyses.
 
-Our dataset on municipal budget execution currently cover ten of Brazil's twenty-seven states, highlighted in Figure 1: Ceará (CE), Distrito Federal (DF), Minas Gerais (MG), Paraíba (PB), Pernambuco (PE), Paraná (PR), Rio de Janeiro (RJ), Rio Grande do Sul (RS), Santa Catarina (SC)and São Paulo (SP). These are large states that cover a substantial share of the total number of municipalities (60%), population (67%), and GDP (76%) of the country according to 2021 data. Notably, our dataset only covers states in the South, Southeast and Northeast regions - data from the states in the North and Center-West regions are currently not available[^2]. Our procurement dataset allows users to see information on specific tenders, such as the number, reserve price, and description of items being sold, the number of participants in competitive tenders, and the identity of participants and winning parties covering six states: CE, MG, PB, PE, PR and RS. On the budget execution side, the data includes information on each commitment, verification (an important step in the budget spending when buyers recognize that a good or service was delivered), and payments, again allowing users to see the identity of payees and the amount and dates of each step of the budget execution. In particular, we can compute the time to pay a particular transaction by using the time elapsed between the verification and payment stages.
+Our dataset on municipal budget execution currently cover ten of Brazil's twenty-seven states, highlighted in Figure 1: Ceará (CE), Distrito Federal (DF), Espírito Santo (ES), Goiás (GO), Minas Gerais (MG), Paraíba (PB), Pernambuco (PE), Paraná (PR), Rio de Janeiro (RJ), Rio Grande do Norte (RN), Rondônia (RO), Rio Grande do Sul (RS), Santa Catarina (SC), São Paulo (SP), and Tocantins (TO). These are large states that cover a substantial share of the total number of municipalities (73%), population (75%), and GDP (83%) of the country according to 2021 data. Notably, our dataset only covers states in the South, Southeast and Northeast regions - data from the states in the North and Center-West regions are currently not available[^2]. Our procurement dataset allows users to see information on specific tenders, such as the number, reserve price, and description of items being sold, the number of participants in competitive tenders, and the identity of participants and winning parties covering nine states: BA, CE, MG, PB, PE, PR, RS, SC, and TO. On the budget execution side, the data includes information on each commitment, verification (an important step in the budget spending when buyers recognize that a good or service was delivered), and payments, again allowing users to see the identity of payees and the amount and dates of each step of the budget execution. In particular, we can compute the time to pay a particular transaction by using the time elapsed between the verification and payment stages.
+
 
 <!-- Query Proportion
 WITH sample AS (
@@ -34,25 +34,33 @@ LEFT JOIN `basedosdados.br_ibge_pib.municipio` AS gdp
 WHERE pop.ano = 2021 AND gdp.ano = 2021
  -->
 
-![Figure1](./images/MapChart_Map.png)
+ Some States are in the process of collecting data, such as Bahia, Sergipe, and Mato Grosso. These websites are complex in relation to scraping and require a lot of time, but all the code is available in the code folder in our GitHub repository.
+
+![Figure1](./images/mapa_atual.png)
+<p align="center"><em>Figure 1: Map of Brazil with data from the respective states</em></p>
 
 ## Temporal coverage
 
-We provide further details on the geographical and temporal coverage of the dataset in Table 1. Starting with geographical coverage, our budget execution tables (commitment, verification, and payment) are available for all ten states. The procurement data are less comprehensive: the dataset currently includes no procurement data for SP, and the data for PB and PE include information on tenders and participants, but not on the more disaggregated level of items. We are working currently in SC raw data. In terms of temporal coverage, most of our budget execution data starts in the early- to mid-2000s, with the exception of PE (2012), PR (2013), and MG (2014), and currently runs until 2021. Once again, data on procurement is less comprehensive and, with the exception of CE (2009-2021), starts in the mid-2010s.
+We provide further details on the geographical and temporal coverage of the dataset in Table 1. Starting with geographical coverage, our budget execution tables (commitment, verification, and payment) are available for all ten states. The procurement data are less comprehensive: the dataset currently includes new States as Tocantins and Santa Catarina with information on tenders and participants, but not on the more disaggregated level of items, for example.  In terms of temporal coverage, most of our budget execution data starts in the early- to mid-2010s with updates in progress. Once again, data on procurement is less comprehensive and, with the exception of CE (2009-2021), starts in the mid-2010s.
 
 
 | State | # municipalities | Commitment | Verification | Payments | Temporal Coverage Budget Execution | Tender | Tender Item | Tender Participants | Temporal Coverage Procurement |
 |-------|------------------|------------|--------------|----------|------------------------------------|--------|-------------|---------------------|-------------------------------|
 | CE    | 184              | ✓          | ✓            | ✓        | 2009-2021                          | ✓      | ✓           | ✓                   | 2009-2021                     |
 | DF    | 1                | ✓          | ✓            | ✓        | 2009-2023                          |        |             |                     |                               |
+| ES    | 78               | ✓          | ✓            | ✓        | 2018-2023                          |        |             |                     | 
+| GO    | 92               | ✓          | ✓            | ✓        | 2019-2024                          |        |             |                     | 
 | MG    | 853              | ✓          | ✓            | ✓        | 2014-2021                          | ✓      | ✓           | ✓                   | 2014-2021                     |
 | PB    | 223              | ✓          | ✓            | ✓        | 2014-2021                          | ✓      |             | ✓                   | 2014-2021                     |
 | PE    | 185              | ✓          | ✓            | ✓        | 2012-2021                          | ✓      |             | ✓                   | 2012-2021                     |
 | PR    | 399              | ✓          | ✓            | ✓        | 2013-2021                          | ✓      | ✓           | ✓                   | 2013-2021                     |
 | RJ    | 92               | ✓          | ✓            | ✓        | 2002-2022                          |        |             |                     |                               |
+| RN    | 167              | ✓          |             |        | 2016-2023                          |       |            |                    |                     |
+| RO    | 52              | ✓          | ✓            | ✓        | 2016-2021                          | ✓      | ✓           | ✓                   | 2016-2021                     |
 | RS    | 497              | ✓          | ✓            | ✓        | 2016-2021                          | ✓      | ✓           | ✓                   | 2016-2021                     |
 | SC    | 276              | ✓          | ✓            | ✓        | 2021-2024                          |        |             |                     |                               |
 | SP    | 645              | ✓          | ✓            | ✓        | 2008-2021                          |        |             |                     |                               |
+| TO    | 139              | ✓          | ✓            | ✓        | 2013-2022                          | ✓       |             |     ✓                |2017-2023                               |
 
 
 ## Institutional context

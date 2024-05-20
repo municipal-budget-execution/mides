@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
-        <title>Procurement - Documentação</title>
+        <title>Procurement - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Documentação" class="md-header__button md-logo" aria-label="Documentação" data-md-component="logo">
+    <a href=".." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../images/logo1_mides_white.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Documentação
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -212,12 +212,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Documentação" class="md-nav__button md-logo" aria-label="Documentação" data-md-component="logo">
+    <a href=".." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../images/logo1_mides_white.png" alt="logo">
 
     </a>
-    Documentação
+    Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -234,10 +234,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
@@ -294,10 +292,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
@@ -470,7 +466,7 @@
 <p>In the <em>tender-item</em> table, each observation is an item, linked to a specific tender. Items will often include a textual description of the specific purchase (e.g., "cleaning detergent 0.5L" or "accounting services"), quantities, unit prices and total prices. In some cases, the item will separately describe the "quoted" prices, before the execution of the tender, and the price for the winning proposal. The item dataset also includes the name and document number of the winning entity, which can be a firm or individual. Each item is uniquely identified by the variable $id_item_bd$ and can be connected to tenders by the variable $id_licitacao_bd$.</p>
 <p>Finally, in the <em>tender-participant</em> table each observation is a participant in a given tender. Some municipalities will only provide winners in each tender, so in that case these will be the same as those listed in the tender-item table. Others will include all participants in a tender, including those that did not win any contracts. The data includes names and document numbers of each participant, as well as an indicator of whether they are winners. Each participant is uniquely identified by the pair of variables $documento$ and $razao_social$, and can be connected to tenders by the variable $id_licitacao_bd$.</p>
 <p>For procurement, across the six states covered, we observe over 2.4 million unique tenders and almost 800,000 unique suppliers. Since we observe microdata on each tender and often items, we are able to compute statistics such as the share of tenders that are deserted and/or unsuccessful (e.g., no bidders in a competitive tender) and the average number of items listed in a tender. We can also document, for example, that across states approximately 30%-40% of tenders are not competitive auctions - meaning they are directly awarded to suppliers by means other than an auction - but in terms of total purchase value these non-competitive tenders always represent less than 20% of total amounts. This is consistent with the fact that, similar to other countries, Brazilian law allows small purchases to be performed without competitive auctions \citep{fazio_rethinking_2022}. We can also compute measures of competitiveness in tenders, such as the number of participants per tender - the average fluctuates between two and four across the municipalities in our sample. The dataset often contains unique identifiers for each supplier, which in Brazil vary if the supplier is an individual or a firm, allowing us to compute the share of suppliers identified as firms (which vary substantially across states, from less than 60% in CE and PB to over 80% in MG). </p>
-<p>We provide an illustrative example of the nature of our data in Figure 1, highlighting a case in which we can track the entire process of public procurement and budget execution[^1].</p>
+<p>We provide an illustrative example of the nature of our data in Figure 1, highlighting a case in which we can track the entire process of public procurement and budget execution<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p><img alt="Image" src="../images/flow_budget_execution_procurement.png" /></p>
 <p>In this figure we zoom in on one case involving the town hall of Abatiá - a municipality with less than 10,000 inhabitants but relatively high income in the state or Paraná - which initiated a tender to procure uniforms for basic health employees, identified by ID 1336360. The tender was officially published in November 2018, with an initial budget of 17,116 BRL. The auction took place on December 13 of the same year, during which bids were received for 23 items, comprising different types of t-shirts and bags. The tender resulted in two winners, one for supplying t-shirts and another for supplying bags. Subsequently, the tender was officially homologated on December 18.</p>
 <p>One day after the tender's homologation, four separate commitments were made - meaning that the local government set apart funds to pay for the purchases, once goods were delivered. Verification of delivery happened in mid-May 2019, five months after the end of the tender. Less than 30 days later, three separate payments were made to different agents that won the contracts, with total values of 11,377 BRL and 3,890 BRL. For the purchase of this relatively simple good, a total of 235 days elapsed between the tender publication and the last payment.</p>
@@ -632,8 +628,15 @@
 </tbody>
 </table>
 <p>This table presents the descriptive statistics from the public procurement dataset. Deserted tenders refers to a situation where no proposals were submitted by potential bidders in response to a tender notice, while unsuccessful tenders occur when proposals were submitted but didentifier not meet the requirements or the tender process was cancelled or revoked. The variables "Has item information" and "Has participant information" refer to the percentage of tender identifiers with any information related to items or participants, respectively. The definition of non-competitive tender encompasses both <em>dispensa</em> and <em>inexigibilidade</em>. To calculate the percentage of "Non-competitive tenders value" we use the variable $valor_corrigido$ winsorized at percentiles 0.01 and 99.9. Additionally, the percentage of firms among suppliers is calculated as the number of distinct firms divided by the number of distinct suppliers, where firms are those whose identifier has 14 digits.</p>
-<p><Footnotes>
-[^1]: We note that this connection between public procurement and budget execution is currently only possible for the state of Parana (PR), which provides a table connecting tender IDs to commitment IDs. Approximately 78% of the procurement IDs and 38% of total commitment IDs can be found within this correspondence table.</p>
+<p><Footnotes></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>We note that this connection between public procurement and budget execution is currently only possible for the state of Parana (PR), which provides a table connecting tender IDs to commitment IDs. Approximately 78% of the procurement IDs and 38% of total commitment IDs can be found within this correspondence table.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -680,7 +683,7 @@
       
     
     <a href="https://github.com/municipal-budget-execution/data-paper" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -698,7 +701,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 2.0}</script>
     
     
-      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
         <script src="../js/termynal.js"></script>
       

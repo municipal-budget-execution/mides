@@ -1,4 +1,4 @@
-site_name: Documentação
+site_name: Documentation
 theme:
   name: material
   palette:
@@ -44,6 +44,7 @@ nav:
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.extra
   #- mkdocs_click
   - attr_list
   - pymdownx.emoji:
@@ -51,10 +52,20 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed
   - pymdownx.superfences
+  - pymdownx.arithmatex
+  - pymdownx.tilde:
+      subscript: true
   
 extra_javascript:
 - js/termynal.js
 - js/custom.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+
+
+extra:
+  arithmatex:
+    inline: ['$', '$']
+    block: ['$$', '$$']
 
 # extra_css:
 # - css/termynal.css
