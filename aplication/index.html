@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
-        <title>Aplication - Documentação</title>
+        <title>Aplication - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -81,10 +81,6 @@
       
     </div>
     
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
-    
     
       
 
@@ -92,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Documentação" class="md-header__button md-logo" aria-label="Documentação" data-md-component="logo">
+    <a href=".." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../images/logo1_mides_white.png" alt="logo">
 
@@ -105,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Documentação
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -212,12 +208,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Documentação" class="md-nav__button md-logo" aria-label="Documentação" data-md-component="logo">
+    <a href=".." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../images/logo1_mides_white.png" alt="logo">
 
     </a>
-    Documentação
+    Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -234,10 +230,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
@@ -294,10 +288,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
@@ -539,19 +531,67 @@
 
 <h1 id="aplication">Aplication</h1>
 <h2 id="local-firm-contracting-in-public-procurement">Local firm contracting in public procurement</h2>
-<p>Using our newly created dataset on local public procurement in Brazil, we investigate how much geographical variation exists in the location of government suppliers. According to \citet{garcia-santana_understanding_2023}, government purchases are highly locally concentrated worldwide. This phenomenon may occur due to supply factors such as regional economic specialization and lack of a diverse local production sector, or frictions such as transportation costs, geography or information asymmetries. It may also be explained by demand factors such as buy-local policies. These policies are ubiquitous across countries, but there is limited evidence regarding whether governments unofficially favor local suppliers even if a formal buy-local policy does not exist. \citet{garcia-santana_understanding_2023} provide compelling evidence that regional governments in Spain and France present home bias, i.e. they favor local suppliers.  </p>
+<p>Using our newly created dataset on local public procurement in Brazil, we investigate how much geographical variation exists in the location of government suppliers. According to
+García-Santana and Santamaría (2023), government purchases are highly locally concentrated worldwide. This phenomenon may occur due to supply factors such as regional economic specialization and lack of a diverse local production sector, or frictions such as transportation costs, geography or information asymmetries. It may also be explained by demand factors such as buy-local policies. These policies are ubiquitous across countries, but there is limited evidence regarding whether governments unofficially favor local suppliers even if a formal buy-local policy does not exist.García-Santana and Santamaría (2023) provide compelling evidence that regional governments in Spain and France present home bias, i.e. they favor local suppliers.  </p>
 <p>In this section, we document the prevalence of local suppliers across Brazilian municipalities, measuring the share of purchases from local governments flowing to firms located in the same municipalities. No such information exists currently in Brazil due to the lack of consistent data on the identity of municipal government suppliers - an information gap we fill with our dataset. We merge the identity of around 575,000 suppliers in local contracts with information on which municipality they are registered in - given by the <em>Cadastro Nacional de Pessoas Jurídicas</em> (CNPJ), a dataset provided by the Ministry of Economy. We consider a firm local if it operates within the municipality, regardless of whether it is a headquarters or a branch.</p>
-<p>In \autoref{fig:home_bias_state}, we present the distribution of the share of local purchases provided by suppliers located in the same municipality in each state, pooling all purchases from 2014 to 2021. PR and MG are the states in which local contracting is higher on average - the mean municipality observation purchases almost one-quarter of its goods and services from suppliers located in the same municipality. RS and CE have slightly lower averages but similar distributions. In contrast, PE and PB exhibit considerably lower levels of local firms contracting, with the entire distribution shifted to the left. However, it is worth noting that, within states, we still observe a large variation in the levels of local contracting. Take MG, for example, a state with more than 800 municipalities. According to our data, the municipalities of <em>Baldim</em> and <em>Ibirité</em> procured less than 10% of total purchases from firms located in the same municipality, whereas municipalities like <em>Almenara</em> and <em>Taiobeiras</em> procured over 60% from local suppliers.</p>
-<p>An important source of heterogeneity discussed in the public procurement literature, which might also affect the identity of suppliers, is the modality of purchase. In general, purchases can be divided into competitive and non-competitive tenders, as described in \autoref{fig:desc_procur_methods}. The literature showing the effects of discretion on procurement outcomes documents that it may have potential negative impacts on efficiency and corruption \citep{baltrunaite_discretion_2021, decarolis_rules_2020, palguta_manipulation_2017}. One explanation is related to favoritism, once lack of competition may favor government bureaucracy to engage in opportunistic behavior for private benefit by awarding contracts to local and/or connected firms. These supplier firms may not be the most efficient, leading to overpricing and other inefficiencies. Using Brazilian federal procurement data, \cite{fazio_rethinking_2022} finds evidence that although public agencies use discretion to purchase higher-quality products, they also use it to favor firms that are politically connected, located in the same municipality as the government agency, larger, and older[^1].</p>
-<p>In order to investigate this heterogeneity, in Figure 1 we present the distribution of the share of same-municipality suppliers by competitive and non-competitive tenders separately. Non-competitive tenders are those classified as a tender waiver (<em>dispensa</em>) or non-requirement tender (<em>inexigibilidade</em>)[^2]. Under the assumption that buying from local suppliers reveals political favoritism and that this is more likely to be enacted in discretionary, non-competitive tenders, we would expect a much larger share of local suppliers in the latter modality. This is not what we document: the average share of purchases from local suppliers is very similar at approximately 20% for both modalities. We do observe more dispersion in non-competitive tenders: while the distribution for competitive ones shows concentration around the mean, in non-competitive tenders we observe both a larger share of municipalities for which almost no suppliers are local and also a larger share with large participation of local suppliers[^3].</p>
-<p>To analyze the supply-side factor, we present the share of same-municipality suppliers for municipalities below and above the median population, as illustrated in \autoref{fig:home_bias_population}. Notably, the calculated median for our dataset, using the 2018 population, stands at 11,590. Within smaller municipalities, the range of economic activities tends to be narrower and less diverse. This likely translates to a scarcity of local businesses available to adequately address the requirements of the local government. In addition, even if there is a supplier for some purchase, smaller municipalities might lack local competition, which can result in higher prices being charged by local suppliers in comparison to suppliers located in more competitive markets. So it is possible that policy-makers in those small municipalities might actually encourage the participation of firms from other areas. We document a pattern of local purchases consistent with those conjectures: on average, municipalities with above-median population present a 7 p.p. higher share of local suppliers (25% vs. 18% for those below median), and the entire distribution of local purchases is shifted to the left for smaller municipalities. </p>
+<p>In Figure 1, we present the distribution of the share of local purchases provided by suppliers located in the same municipality in each state, pooling all purchases from 2014 to 2021. PR and MG are the states in which local contracting is higher on average - the mean municipality observation purchases almost one-quarter of its goods and services from suppliers located in the same municipality. RS and CE have slightly lower averages but similar distributions. In contrast, PE and PB exhibit considerably lower levels of local firms contracting, with the entire distribution shifted to the left. However, it is worth noting that, within states, we still observe a large variation in the levels of local contracting. Take MG, for example, a state with more than 800 municipalities. According to our data, the municipalities of <em>Baldim</em> and <em>Ibirité</em> procured less than 10% of total purchases from firms located in the same municipality, whereas municipalities like <em>Almenara</em> and <em>Taiobeiras</em> procured over 60% from local suppliers.</p>
+<p><img alt="Figure1" src="../images/home_bias_by_state.png" /></p>
+<p align="center"><em> Figure 1: Distribution of share of local suppliers across different states</em></p>
+
+<p>An important source of heterogeneity discussed in the public procurement literature, which might also affect the identity of suppliers, is the modality of purchase. In general, purchases can be divided into competitive and non-competitive tenders, as described in <a href="../procurement_methods/#procurement-methods">procurement</a>. The literature showing the effects of discretion on procurement outcomes documents that it may have potential negative impacts on efficiency and corruption (Baltrunaite et al., 2021; Decarolis et al., 2020; Palguta and Pertold, 2017). One explanation is related to favoritism, once lack of competition may favor government bureaucracy to engage in opportunistic behavior for private benefit by awarding contracts to local and/or connected firms. These supplier firms may not be the most efficient, leading to overpricing and other inefficiencies. Using Brazilian federal procurement data, (Fazio, 2022) finds evidence that although public agencies use discretion to purchase higher-quality products, they also use it to favor firms that are politically connected, located in the same municipality as the government agency, larger, and older<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>In order to investigate this heterogeneity, in Figure 2 we present the distribution of the share of same-municipality suppliers by competitive and non-competitive tenders separately. Non-competitive tenders are those classified as a tender waiver (<em>dispensa</em>) or non-requirement tender (<em>inexigibilidade</em>)<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. Under the assumption that buying from local suppliers reveals political favoritism and that this is more likely to be enacted in discretionary, non-competitive tenders, we would expect a much larger share of local suppliers in the latter modality. This is not what we document: the average share of purchases from local suppliers is very similar at approximately 20% for both modalities. We do observe more dispersion in non-competitive tenders: while the distribution for competitive ones shows concentration around the mean, in non-competitive tenders we observe both a larger share of municipalities for which almost no suppliers are local and also a larger share with large participation of local suppliers<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
+<p><img alt="Figure2" src="../images/home_bias_all.png" /></p>
+<p align="center"><em> Figure 2: Distribution of share of local suppliers, by type of purchase</em></p>
+
+<p>To analyze the supply-side factor, we present the share of same-municipality suppliers for municipalities below and above the median population, as illustrated in Figure 3. Notably, the calculated median for our dataset, using the 2018 population, stands at 11,590. Within smaller municipalities, the range of economic activities tends to be narrower and less diverse. This likely translates to a scarcity of local businesses available to adequately address the requirements of the local government. In addition, even if there is a supplier for some purchase, smaller municipalities might lack local competition, which can result in higher prices being charged by local suppliers in comparison to suppliers located in more competitive markets. So it is possible that policy-makers in those small municipalities might actually encourage the participation of firms from other areas.</p>
+<p><img alt="Figure3" src="../images/home_bias_population.png" /></p>
+<p align="center"><em> Figure 3: Distribution of share of local suppliers, by population size</em></p>
+
+<p>We document a pattern of local purchases consistent with those conjectures: on average, municipalities with above-median population present a 7 p.p. higher share of local suppliers (25% vs. 18% for those below median), and the entire distribution of local purchases is shifted to the left for smaller municipalities. </p>
 <h2 id="timeliness-in-government-payments">Timeliness in government payments</h2>
-<p>Another important dimension of procurement practices is the timeliness of payments.  Stretched payment terms increase the length of time between the payments for inputs and the receipt of cash from customers, increasing the working capital needs and financial expenses of suppliers. Previous research has documented the importance of trade credit terms for the performance of firms \citep{checherita-westphal_governments_2016, breza_financial_2017}. In extreme cases, late payments can lead to default and bankruptcy.</p>
-<p>Governments across the world often take long to pay their suppliers: procuring entities take on average 100 days to pay firms, with vast variation across countries \citep{bosio_public_2022}. This has several important implications. First, government purchases are a large share of the economy and a substantial revenue source for firms, affecting their future growth and employment trajectory \citep{ferraz_procuring_2015}. When governments take long to pay their suppliers, they impose an additional financial cost on firms deciding to supply, and potentially exclude small and medium-sized firms that are more likely to be liquidity constrained \citep{barrot_employment_2020}. Second, if firms understand these additional financial costs, firms may avoid competing for government contracts or, upon deciding to compete, only accept higher prices that make up for the additional liquidity necessary to finance themselves. In either case, that may reduce the cost-effectiveness of public purchases and/or lead to worsening of the quality of goods and services procured. Some government have explicitly introduced reforms to accelerate payment to suppliers: \citet{barrot_employment_2020} discuss the impact of <em>QuickPay</em>, which decreased the payment delay from 30 to 15 days for small business in the U.S. in 2011; and Chile introduced the Centralized Payment Platform (PPC, Spanish acronym for <em>Plataforma de Pagos Centralizados</em>) in 2020, which centralized payments from purchasing units to the Treasury and started to enforce a 30-day limit to payments.</p>
-<p><Footnotes>
-[^1]: In the Hungarian context, \cite{szucs_discretion_2023} finds a similar result - winners of high discretion procedures are more likely to be domestically owned. On the other hand, contracts in high discretion procedures tend to be awarded to younger and smaller firms.</p>
-<p>[^2]: The first one consists of cases in which competition would be feasible, but the government chooses not to carry out the tender process - which is possible under a specific threshold established by procurement law. On the other hand, non-requirement occurs when competition is impossible (i.e. only one possible supplier, acquisition of unique goods or hiring of specialized professionals).</p>
-<p>[^3]: It is worth mentioning that we can only calculate this measure for suppliers whose national identifier consists of 14 digits - firms with a CNPJ. In our dataset we also have individual suppliers, registered with an 11-digit identifier (CPF). For those cases, we can not identify whether the purchases are more or less local, but we do know that non-competitive tenders represents a larger share of total number of purchases for individual suppliers (63%) than for firms (24%). If individual suppliers - which tend to be smaller - are more local, we might expect the distribution in the second panel to be shifted to the right.</p>
+<p>Another important dimension of procurement practices is the timeliness of payments.  Stretched payment terms increase the length of time between the payments for inputs and the receipt of cash from customers, increasing the working capital needs and financial expenses of suppliers. Previous research has documented the importance of trade credit terms for the performance of firms (Checherita-Westphal et al., 2016; Breza and Liberman, 2017). In extreme cases, late payments can lead to default and bankruptcy.</p>
+<p>Governments across the world often take long to pay their suppliers: procuring entities take on average 100 days to pay firms, with vast variation across countries (Bosio et al., 2022). This has several important implications. First, government purchases are a large share of the economy and a substantial revenue source for firms, affecting their future growth and employment trajectory (Ferraz et al., 2015). When governments take long to pay their suppliers, they impose an additional financial cost on firms deciding to supply, and potentially exclude small and medium-sized firms that are more likely to be liquidity constrained (Barrot and
+Nanda, 2020). Second, if firms understand these additional financial costs, firms may avoid competing for government contracts or, upon deciding to compete, only accept higher prices that make up for the additional liquidity necessary to finance themselves. In either case, that may reduce the cost-effectiveness of public purchases and/or lead to worsening of the quality of goods and services procured. Some government have explicitly introduced reforms to accelerate payment to suppliers: Barrot and
+Nanda (2020) discuss the impact of <em>QuickPay</em>, which decreased the payment delay from 30 to 15 days for small business in the U.S. in 2011; and Chile introduced the Centralized Payment Platform (PPC, Spanish acronym for <em>Plataforma de Pagos Centralizados</em>) in 2020, which centralized payments from purchasing units to the Treasury and started to enforce a 30-day limit to payments.</p>
+<p>We document payment timeliness across Brazilian municipalities using a sample from the dataset. We highlight this exercise is only possible by using microdata on the entire budget executing process. In an ideal scenario, we would be able to connect each payment
+to a single verification, and then compute average payment delays at the verification level.
+In practice, the majority of payments are connected to one commitment, but not to a verifi-
+cation. We instead compute payment delays at the commitment level – in cases where one
+commitment is linked to more than one verification and more than one payment, we compute
+amount-weighted-dates for verifications and payments, and then determine payment delay
+as the difference between these two dates<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. We restrict our sample to procurement-related
+commitment, to focus on delay to suppliers, and further restrict it to the purchase of goods
+and materials – since verifications of services are often more complex and numerous.</p>
+<p>Procurement law in Brazil determines that payments should be made no later than 30 days after the verification, with a shorter limit of 5 days for bid waiver processes <em>dispensa de licitação</em>. In Figure 4 below, we present the distribution of the average payment delay at the municipality-by-year level, where average delays are calculated using the total amount of committed funds as weights (so it can be interpreted as the average delay to pay 1 BRL). In Figure 4a, we show the histogram of our delay measure -- the distribution is centered around 15 days, showing that in the majority of municipality-year observations the average payment delay is well below the 30 day limit. </p>
+<p><img alt="Figure4a" src="../images/hist_sample_wavg_delay.jpeg" /></p>
+<p align="center"><em> Figure 4a: Distribution of payment delays at municipality-year level - Histogram</em></p>
+
+<p>We also document, nonetheless, a large right tail of observations with average delays well above 30 days: in Figure 4b, we show that approximately 20% of municipality-years have an average payment delay above 30 days, and many are above 45 or even 60 days. Overall, approximately 15% of the total amount paid in the procurement of goods and materials in recent years is made in more than 30 days.</p>
+<p><img alt="Figure4b" src="../images/cdf_years_wavg_delay.jpeg" /></p>
+<p align="center"><em> Figure 4b: Distribution of payment delays at municipality-year level - Cumulative Distribution Function (CDF)</em></p>
+
+<p>Panel 4a presents the histogram of average payment delay at the municipality-year level, where
+average delay is weighted by total committed amount. The dotted line marks the 30-day threshold, the
+maximum allowed payment delay for procurement in Brazil. The underlying data cover the 2014-2018 period and six states (CE, MG, PB, PR, RS and SP). PE was not included due to our
+inability to match payments to their respective commitments at the time.</p>
+<p><Footnotes></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>In the Hungarian context, Szucs (2023) finds a similar result - winners of high discretion procedures are more likely to be domestically owned. On the other hand, contracts in high discretion procedures tend to be awarded to younger and smaller firms.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>The first one consists of cases in which competition would be feasible, but the government chooses not to carry out the tender process - which is possible under a specific threshold established by procurement law. On the other hand, non-requirement occurs when competition is impossible (i.e. only one possible supplier, acquisition of unique goods or hiring of specialized professionals).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>It is worth mentioning that we can only calculate this measure for suppliers whose national identifier consists of 14 digits - firms with a CNPJ. In our dataset we also have individual suppliers, registered with an 11-digit identifier (CPF). For those cases, we can not identify whether the purchases are more or less local, but we do know that non-competitive tenders represents a larger share of total number of purchases for individual suppliers (63%) than for firms (24%). If individual suppliers - which tend to be smaller - are more local, we might expect the distribution in the second panel to be shifted to the right.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Details on the methodology to compute delays in complex situations, when one commitment is linked to several verifications and several payments, are discussed in Ricca (2019).&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -588,21 +628,6 @@
   
 </div>
       
-        <div class="md-social">
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://github.com/municipal-budget-execution/data-paper" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-    </a>
-  
-</div>
-      
     </div>
   </div>
 </footer>
@@ -613,14 +638,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 2.0}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
         <script src="../js/termynal.js"></script>
       
         <script src="../js/custom.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>
